@@ -2,7 +2,7 @@ Bostonedmcalendar::Application.routes.draw do
   devise_for :user
 
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'home#admin_index'
   end
 
   resources :twitters, :users, :events, :venues
@@ -15,4 +15,5 @@ Bostonedmcalendar::Application.routes.draw do
   #match 'all_new{.}json'#, :to => 'venues#all_new', :as => :all_new_venues_path
   #TODO: post 'import_export.json', => 'venues#import_export.json', :as => :"import_export_venues.json"#, :content_type => :"application/json"
   root :to => "home#index"
+  match '/concerts', :to => 'home#index'
 end
