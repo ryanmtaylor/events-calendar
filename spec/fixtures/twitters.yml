@@ -1,0 +1,11 @@
+one:
+  user: 
+  uid: MyString
+  token: MyString
+  secret: MyString
+
+two:
+  user: 
+  uid: MyString
+  token: MyString
+  secret: MyString

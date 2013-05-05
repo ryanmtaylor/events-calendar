@@ -1,0 +1,23 @@
+<% title "Twitters" %>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Uid</th>
+    <th>Token</th>
+    <th>Secret</th>
+  </tr>
+  <% for twitter in @twitters %>
+    <tr>
+      <td><%= twitter.user %></td>
+      <td><%= twitter.uid %></td>
+      <td><%= twitter.token %></td>
+      <td><%= twitter.secret %></td>
+      <td><%= link_to "Show", twitter %></td>
+      <td><%= link_to "Edit", edit_twitter_path(twitter) %></td>
+      <td><%= link_to "Destroy", twitter, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Twitter", new_twitter_path %></p>

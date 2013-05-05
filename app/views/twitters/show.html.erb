@@ -1,0 +1,24 @@
+<% title "Twitter" %>
+
+<p>
+  <strong>User:</strong>
+  <%= @twitter.user %>
+</p>
+<p>
+  <strong>Uid:</strong>
+  <%= @twitter.uid %>
+</p>
+<p>
+  <strong>Token:</strong>
+  <%= @twitter.token %>
+</p>
+<p>
+  <strong>Secret:</strong>
+  <%= @twitter.secret %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_twitter_path(@twitter) %> |
+  <%= link_to "Destroy", @twitter, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", twitters_path %>
+</p>

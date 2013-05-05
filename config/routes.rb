@@ -1,4 +1,8 @@
 Bostonedmcalendar::Application.routes.draw do
+  resources :twitters
+
+  resources :venues
+
   authenticated :user do
     root :to => 'home#index'
   end
