@@ -11,30 +11,37 @@
 <link rel="shortcut icon" href="http://www.bostonedmcalendar.com/wp-content/themes/clubber/favicon.ico" />
 
 <!-- Stylesheets -->
+<script src="http://code.jquery.com/jquery.min.js"></script>
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis" type="text/css" media="screen" />
 <link rel="stylesheet" href="http://www.bostonedmcalendar.com/wp-content/themes/clubber/style.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="http://www.bostonedmcalendar.com/wp-content/themes/clubber/css/css_options.php" type="text/css" media="screen" />
-<link rel="stylesheet" href="http://www.bostonedmcalendar.com/wp-content/themes/clubber/css/dark.css" type="text/css" media="screen" />
 <!-- Wordpress functions -->  
 <link rel="alternate" type="application/rss+xml" title="Boston EDM Calendar &raquo; Events Comments Feed" href="http://www.bostonedmcalendar.com/sample-page/feed/" />
+<%- if false %>
+<!--
+<link rel="stylesheet" href="http://www.bostonedmcalendar.com/wp-content/themes/clubber/css/dark.css" type="text/css" media="screen" />
 <link rel='stylesheet' id='prettyPhoto-css'  href='http://www.bostonedmcalendar.com/wp-content/themes/clubber/css/prettyPhoto.css?ver=3.5.1' type='text/css' media='all' />
 <link rel='stylesheet' id='shortcodes-css'  href='http://www.bostonedmcalendar.com/wp-content/themes/clubber/css/shortcodes.css?ver=3.5.1' type='text/css' media='all' />
 <script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-includes/js/jquery/jquery.js?ver=1.8.3'></script>
+<script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/themes/clubber/js/backstretch.js?ver=3.5.1'></script>
 <script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/themes/clubber/js/cycle.js?ver=3.5.1'></script>
 <script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/themes/clubber/js/audio.js?ver=3.5.1'></script>
 <script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/themes/clubber/js/mosaic.js?ver=3.5.1'></script>
 <script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/themes/clubber/js/p.prettyPhoto.js?ver=3.5.1'></script>
-<script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/themes/clubber/js/backstretch.js?ver=3.5.1'></script>
+<script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/themes/clubber/js/script.js?ver=3.5.1'></script>
+<script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-includes/js/comment-reply.min.js?ver=3.5.1'></script>
+
+<script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=3.5.1'></script>
+
+<link rel='next' title='Contact Us' href='http://www.bostonedmcalendar.com/contact-us/' />
+-->
+<%- end %>
 <script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/themes/clubber/js/gmap.js?ver=3.5.1'></script>
 <script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/themes/clubber/js/idTabs.js?ver=3.5.1'></script>
-<script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/themes/clubber/js/script.js?ver=3.5.1'></script>
 <script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/themes/clubber/js/dark.js?ver=3.5.1'></script>
 <script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?sensor=false&#038;ver=3.5.1'></script>
-<script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=3.5.1'></script>
-<script type='text/javascript' src='http://www.bostonedmcalendar.com/wp-includes/js/comment-reply.min.js?ver=3.5.1'></script>
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.bostonedmcalendar.com/xmlrpc.php?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.bostonedmcalendar.com/wp-includes/wlwmanifest.xml" /> 
-<link rel='next' title='Contact Us' href='http://www.bostonedmcalendar.com/contact-us/' />
 <meta name="generator" content="Ryan Taylor, ThemeForest, and Ruby on Rails :P" />
 <link rel='canonical' href='http://www.bostonedmcalendar.herokuapp.com/' />
 </head>
@@ -44,8 +51,9 @@
 
 <!-- Manually added facebook code -->
 <meta property="fb:admins" content="225056407517502"/>
-<meta property="fb:app_id" content="225056407517502"/>
+<meta property="fb:app_id" content="198015273671174"/>
 <div id="fb-root"></div>
+<!--
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -53,6 +61,7 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=198015273671174";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+-->
 <!-- end of facebook code -->
 <!-- Header -->
 <div id="header" style="position:relative">       
@@ -93,14 +102,15 @@
 }
 </style>
       <a href="http://www.bostonedmcalendar.com"><h1><span class="white-text">BOSTON</span> <span class="blue-text">EDM</span> <span class="white-text">CALENDAR</span></h1></a>    </div><!-- end #logo -->
+<%- if false %>
     <div id="main">
       <div class="main-navigation">
         <div id="clubbmenu" class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item active"><a href="http://www.bostonedmcalendar.com/">Events</a></li>
 <li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.bostonedmcalendar.com/contact-us/">Contact Us</a></li>
 </ul></div> 
-
       </div><!-- end .main-navigation -->     
     </div><!-- end #main -->
+<%- end %>
   </div><!-- end .header-row fixed -->           
 </div><!-- end #header -->
 
@@ -108,6 +118,8 @@
 
 <!-- Footer -->
 <div id="footer">
+<%- if false %>
+
   <div class="footer-row fixed">
       
     <div class="footer-col">
@@ -126,8 +138,8 @@
     
     </div><!-- end .footer-col -->  
   </div><!-- end .footer-row fixed -->      
+<%- end %>
 </div><!-- end #footer -->
-
 <div class="footer-bottom"> 
   <div class="footer-row">
     <div class="footer-bottom-social">
@@ -142,17 +154,15 @@
   </div><!-- end .footer-row -->
 </div><!-- end .footer-bottom -->
 </body>
-<!-- Manually added twitter code -->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<!-- end twitter -->
 </html>
-<!-- Manually added twitter code -->
+<!-- Twitter & Facebook code -->
 <script id="twitter-wjs" src="//platform.twitter.com/widgets.js" async></script>
+<script id="facebook-jssdk" src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=198015273671174" async></script>
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-37578083-1']);
   _gaq.push(['_trackPageview']);
-  //change later
+
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
