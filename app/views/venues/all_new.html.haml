@@ -2,5 +2,5 @@
 - if flash[:errors]
   %p.errors flash[:errors]
 = form_for(all_new_venues_path, :method => :post) do
-  = text_area_tag(:venue_json, @venues.to_json)
+  = text_area_tag(:venue_json, @venues.to_json, :rows => '10', :style => "width: 100%")
   = submit_tag("Import")
