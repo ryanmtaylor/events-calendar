@@ -1,4 +1,5 @@
 class VenuesController < ApplicationController
+
   def index
     @venues = Venue.all
   end
@@ -37,5 +38,18 @@ class VenuesController < ApplicationController
     @venue = Venue.find(params[:id])
     @venue.destroy
     redirect_to venues_url, :notice => "Successfully destroyed venue."
+  end
+
+  def all_new #import
+    @venues = Venue.all
+  end
+
+  def create_all
+    JSON.parse(params[:venue_json]).each do |venue_attributes|
+      (Venue.find(venue_attributes[:id]) || Venue.new).update_attributes(venue_attributes).tap(&:valid?)
+    end
+    #TODO: flash errors
+    flash[:errors] = Venue.all.errors.to_sentence
+    redirect_to all_new_venues_path
   end
 end

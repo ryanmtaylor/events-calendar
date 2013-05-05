@@ -1,0 +1,6 @@
+%h3 Venue JSON Import/Export
+- if flash[:errors]
+  %p.errors flash[:errors]
+= form_for(all_new_venues_path, :method => :post) do
+  = text_area_tag(:venue_json, @venues.to_json)
+  = submit_tag("Import")
