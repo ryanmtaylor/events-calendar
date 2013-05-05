@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Bostonedmcalendar::Application.config.secret_token = '7b1f6822392019efd090c63fe8fb22260964a6ea903f006ff11fbc23bd632f366a85bb85d111736f806f8284e3b061d6631562037d21c312ddeab3a4f50d5545'
+Bostonedmcalendar::Application.config.secret_token = '4cc8f15935c8fafeb70057920fefeff5c11e87439481a6fdc2f855f585dc9080928d546fe744ca069fd5eb67af6baca0b17b244f7a0331f7d4219f59bff12f46'
