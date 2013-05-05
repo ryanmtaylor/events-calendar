@@ -2,10 +2,10 @@ one:
   name: MyString
   address: MyString
   website: MyString
-  twitter: 
+  twitter: MyString
 
 two:
   name: MyString
   address: MyString
   website: MyString
-  twitter: 
+  twitter: MyString

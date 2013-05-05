@@ -4,7 +4,7 @@ class CreateVenues < ActiveRecord::Migration
       t.string :name
       t.string :address
       t.string :website
-      t.references :twitter
+      t.string :twitter
       t.timestamps
     end
   end
