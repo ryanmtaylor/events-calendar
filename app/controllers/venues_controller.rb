@@ -43,12 +43,12 @@ class VenuesController < ApplicationController
   def all_new #import
     @venues = Venue.all
   end
-
+#
   def create_all
+    #Update all, don't save.  Validate all, drop old values, save.
     JSON.parse(params[:venue_json]).each do |venue_attributes|
-      (Venue.find(venue_attributes[:id]) || Venue.new).update_attributes(venue_attributes).tap(&:valid?)
+      (Venue.find(venue_attributes['id']) || Venue.new).send(:attributes=, venue_attributes.slice(Venue.attribute_names), false)#(*Venue.accessible_attributes)
     end
-    #TODO: flash errors
     flash[:errors] = Venue.all.errors.to_sentence
     redirect_to all_new_venues_path
   end
