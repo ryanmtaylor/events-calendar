@@ -1,0 +1,25 @@
+
+%h3 Twitters
+.span8
+  %table.table.table-condensed
+    %thead
+      %tr
+        %th User
+        %th UID
+        %th Token
+        %th Secret
+        %th
+        %th
+        %th
+    %tbody
+      - for twitter in @twitters
+        %tr
+          %td= twitter.user
+          %td= twitter.uid
+          %td= twitter.token
+          %td= twitter.secret
+          %td= link_to "Show", twitter
+          %td= link_to "Edit", edit_twitter_path(twitter)
+          %td= link_to "Destroy", twitter, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Twitter", new_twitter_path

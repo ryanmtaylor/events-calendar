@@ -1,0 +1,48 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @event.title
+%p
+  %b Cost:
+  = @event.cost
+%p
+  %b Description:
+  = @event.description
+%p
+  %b Venue:
+  = @event.venue.name
+%p
+  %b Start time:
+  = @event.start_time
+%p
+  %b End time:
+  = @event.end_time
+%p
+  %b Date:
+  = @event.date
+%p
+  %b Is small:
+  = @event.is_small
+%p
+  %b Categories:
+  = @event.categories_sentence
+%p
+  %b Image url:
+  = @event.image_url
+%p
+  %b Url:
+  = @event.url
+%p
+  %b Url text:
+  = @event.url_text
+%p
+  %b Draft?:
+  = !@event.is_published
+%p
+  %b Age:
+  = @event.age_limit
+
+= link_to 'Edit', edit_event_path(@event)
+\|
+= link_to 'Back', events_path

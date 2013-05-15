@@ -1,0 +1,30 @@
+%h3 Venues
+.span8
+  %table.table.table-condensed
+    %tr
+      %th Name
+      %th Address
+      %th Website
+      %th Twitter
+      %th
+      %th
+      %th
+    - for venue in @venues
+      %tr
+        %td= venue.name
+        %td= venue.address
+        %td= venue.website
+        %td= venue.twitter
+        %td= link_to "Show", venue
+        %td= link_to "Edit", edit_venue_path(venue)
+        %td= link_to "Destroy", venue, :confirm => 'Are you sure?', :method => :delete
+  - if false
+    = link_to "Import/Export Venues", all_new_venues_path
+  
+  = link_to "New Venue", new_venue_path
+:css
+  td{
+    white-space:nowrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+  }

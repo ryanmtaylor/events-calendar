@@ -1,0 +1,21 @@
+= simple_form_for(@event) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :cost
+    = f.input :description
+    = f.association :venue
+    = f.input :start_time
+    = f.input :end_time
+    = f.input :date
+    = f.input :is_small
+    = f.association :categories, as: :check_boxes
+    = f.input :image_url
+    = f.input :url, as: :url
+    = f.input :url_text
+    = f.input :is_published
+    = f.input :age_limit, collection: Event::AGE_CATEGORIES
+
+  .form-actions
+    = f.button :submit

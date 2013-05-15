@@ -1,0 +1,68 @@
+%h3 Events
+.span8
+  %table.events.table.table-condensed
+    %thead
+      %tr
+        %th Title
+        %th Cost
+        %th Description
+        %th Venue
+        %th Time
+        %th Date
+        %th Categories
+        %th Image
+        %th URL
+        %th Small
+        %th Draft
+        %th Age
+        %th
+        %th
+        %th
+    %tbody
+      - @events.sort_by(&:date).each do |event|
+        %tr
+          %td.title= event.title
+          %td.cost= number_to_currency event.cost
+          %td.description= event.description#, :length => 15, :omission => '...'
+          %td.venue= truncate event.venue.name#, :length => 10, :omission => '...'
+          %td.time= "#{show_time event.start_time} - #{show_time event.end_time}"
+          %td.date= event.date.to_s(:short)
+          %td.categories= truncate event.categories_sentence#, :length => 10, :omission => '...'
+          %td.image-url= event.image_url
+          %td.url= event.url
+          %td.is-small= event.small?
+          %td.is-draft= event.draft?
+          %td.age-limt= event.age_limit
+          %td.show= link_to 'Show', event
+          %td.edit= link_to 'Edit', edit_event_path(event)
+          %td.destroy= link_to 'Destroy', event, :method => :delete, :data => { :confirm => 'Are you sure?' }
+  
+  %br
+  = link_to 'New Event', new_event_path
+:css
+  table.events.table tr{
+    position: relative;
+  }
+  table.events.table td{
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  table.events.table td:hover{
+    overflow: visible;
+  }
+  table.events.table td > span:hover{
+    z-index: 2;
+    white-space: wrap;
+    outline: 1px solid black;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    border-color: black;
+    width: 500px;
+  }
+:javascript
+  $('td').wrapInner('<span>');

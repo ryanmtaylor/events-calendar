@@ -40,16 +40,16 @@ class VenuesController < ApplicationController
     redirect_to venues_url, :notice => "Successfully destroyed venue."
   end
 
-  def all_new #import
-    @venues = Venue.all
-  end
+#  def all_new #import
+#    @venues = Venue.all
+#  end
 #
-  def create_all
-    #Update all, don't save.  Validate all, drop old values, save.
-    JSON.parse(params[:venue_json]).each do |venue_attributes|
-      (Venue.find(venue_attributes['id']) || Venue.new).send(:attributes=, venue_attributes.slice(Venue.attribute_names), false)#(*Venue.accessible_attributes)
-    end
-    flash[:errors] = Venue.all.errors.to_sentence
-    redirect_to all_new_venues_path
-  end
+#  def create_all
+#    #Update all, don't save.  Validate all, drop old values, save.
+#    JSON.parse(params[:venue_json]).each do |venue_attributes|
+#      (Venue.find(venue_attributes['id']) || Venue.new).send(:attributes=, venue_attributes.slice(Venue.attribute_names), false)#(*Venue.accessible_attributes)
+#    end
+#    flash[:errors] = Venue.all.errors.to_sentence
+#    redirect_to all_new_venues_path
+#  end
 end
