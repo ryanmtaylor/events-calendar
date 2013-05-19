@@ -223,6 +223,7 @@ DEPENDENCIES
   jquery-rails
   mocha
   nifty-generators
+  nokogiri
   omniauth
   omniauth-twitter
   pg
