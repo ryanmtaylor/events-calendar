@@ -78,5 +78,8 @@ module Bostonedmcalendar
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    #don't precompile assets  -- production only i would have thought
+    config.assets.initialize_on_precompile = false
   end
 end

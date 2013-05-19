@@ -85,4 +85,5 @@ Bostonedmcalendar::Application.configure do
 
   #don't precompile assets
   config.assets.initialize_on_precompile = false
+
 end
