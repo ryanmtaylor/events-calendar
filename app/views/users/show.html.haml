@@ -1,5 +1,7 @@
 %h3 User
-%p
-  User: #{@user.name}
-%p
-  Email: #{@user.email if @user.email}
+- if @user.name.present?
+  %p
+    User: #{@user.name}
+- if @user.email.present?
+  %p
+    Email: #{@user.email}

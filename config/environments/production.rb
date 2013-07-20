@@ -83,7 +83,7 @@ Bostonedmcalendar::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  #don't precompile assets
+  # Don't precompile assets, for heroku
   config.assets.initialize_on_precompile = false
 
 end

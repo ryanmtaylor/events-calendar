@@ -18,10 +18,9 @@
         %td= link_to "Show", venue
         %td= link_to "Edit", edit_venue_path(venue)
         %td= link_to "Destroy", venue, :confirm => 'Are you sure?', :method => :delete
-  - if false
-    = link_to "Import/Export Venues", all_new_venues_path
-  
+  /= link_to "Import/Export Venues", all_new_venues_path  
   = link_to "New Venue", new_venue_path
+
 :css
   td{
     white-space:nowrap; 

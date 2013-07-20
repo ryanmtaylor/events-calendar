@@ -1,6 +1,11 @@
+- content_for :javascripts do
+  = stylesheet_link_tag "jquery.timepicker"
+  = javascript_include_tag "jquery.timepicker"
+
+  /ideally this would go with the input -- and not add the file twice
+
 = simple_form_for(@event) do |f|
   = f.error_notification
-
   .form-inputs
     = f.input :title
     = f.input :cost
@@ -19,3 +24,19 @@
 
   .form-actions
     = f.button :submit
+
+= form_for @event do |f|
+  .form-inputs
+    = f.label :title
+    = f.text_field :title
+    = f.label :start_time
+    = f.text_field :start_time
+    = f.label :end_time
+    = f.text_field :end_time
+  .form-actions
+    = f.button :submit
+
+:javascript
+  $(function(){
+    $(".event_start_time").timepicker();
+  })

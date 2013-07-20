@@ -2,10 +2,6 @@ class HomeController < ApplicationController
   skip_before_filter :authenticate_user!, :only => [:index]
   layout :public_layout, :only => :index
 
-  def admin
-    @users = User.all
-  end
-
   def index
   end
 
